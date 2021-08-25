@@ -1,0 +1,1771 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make Debug
+# make[1]: Entering directory '/home/d5learner-01/OF/apps/myApps/Synthe'
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Aug 25 14:35:39 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 257)
+CORE_EXCLUSIONS = $(strip $(PLATFORM_CORE_EXCLUSIONS))
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 343)
+OF_CORE_HEADER_FILES = $(filter-out $(CORE_EXCLUSIONS),$(shell $(FIND) $(OF_CORE_SOURCE_PATHS) -name "*.h" | grep -v "/\.[^\.]"))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 342)
+PLATFORM_SHARED_LIBRARIES = 
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+CONDA_MKL_INTERFACE_LAYER_BACKUP = 
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 22)
+TARGET = bin/$(APPNAME)_debug
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 332)
+OF_CORE_BASE_CXXFLAGS = $(PLATFORM_CXXFLAGS)
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1001/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 172)
+OF_LIBS_PATH = $(OF_ROOT)/libs
+# makefile
+SHELL = /bin/sh
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 18)
+RUN_TARGET = RunDebug
+# environment
+JOURNAL_STREAM = 8:47242
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 211)
+PLATFORM_OPTIMIZATION_CFLAGS_RELEASE = -O3
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 30)
+HAS_SYSTEM_GTK3 = $(shell pkg-config gtk+-3.0 --exists; echo $$?)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 1)
+MAKEFILE_LIST :=  Makefile config.make /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 222)
+PLATFORM_OPTIMIZATION_CFLAGS_DEBUG = -g3
+# automatic
+@F = $(notdir $@)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 238)
+PLATFORM_PKG_CONFIG = pkg-config
+# environment
+IM_CONFIG_PHASE = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 163)
+OF_ADDONS_PATH = $(OF_ROOT)/addons
+# environment
+USERNAME = d5learner-01
+# environment
+MAKELEVEL := 1
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 66)
+CROSS_COMPILING = 0
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 196)
+OF_CORE_LIB_PATH = $(OF_LIBS_OF_COMPILED_PATH)/lib/$(PLATFORM_LIB_SUBPATH)
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1001/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 119)
+PLATFORM_REQUIRED_ADDONS = 
+# environment
+MANAGERPID = 2059
+# environment
+P9K_SSH = 0
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1001/vscode-ipc-29078984-e40f-4d20-b527-3dfb909927d8.sock
+# environment
+LC_NAME = fr_FR.UTF-8
+# environment
+VSCODE_CWD = /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 169)
+OF_APPS_PATH = $(OF_ROOT)/apps
+# environment
+GSETTINGS_SCHEMA_DIR = /home/d5learner-01/anaconda3/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/d5learner-01/anaconda3/bin:/home/d5learner-01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+MKL_INTERFACE_LAYER = LP64,GNU
+# environment
+GPG_AGENT_INFO = /run/user/1001/gnupg/S.gpg-agent:0:1
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+PG_OF_PATH = /home/d5learner-01/OF
+# environment
+SESSION_MANAGER = local/CN-DATA8-01:@/tmp/.ICE-unix/2755,unix/CN-DATA8-01:/tmp/.ICE-unix/2755
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 180)
+OF_LIBS_OF_COMPILED_PATH = $(OF_LIBS_OPENFRAMEWORKS_PATH)Compiled
+# environment
+XDG_RUNTIME_DIR = /run/user/1001
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 40)
+FIND = find
+# environment
+LC_ALL = C
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 324)
+OF_CORE_DEFINES_CFLAGS = $(addprefix -D,$(PLATFORM_DEFINES))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 288)
+PLATFORM_HEADER_SEARCH_PATHS = 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 268)
+OF_CORE_SOURCE_PATHS = $(filter-out $(CORE_EXCLUSIONS),$(ALL_OF_CORE_SOURCE_PATHS))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 280)
+OF_CORE_THIRDPARTY_HEADER_PATHS = $(filter-out $(CORE_EXCLUSIONS),$(ALL_OF_CORE_THIRDPARTY_HEADER_PATHS))
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=ef268a63-9adf-4ad8-acc3-a988159a77d9&iid=ef268a63-9adf-4ad8-acc3-a988159a77d9&sid=ef268a63-9adf-4ad8-acc3-a988159a77d9","uploadToServer":true}
+# environment
+INVOCATION_ID = 71edf283da28449da67a1e3eee0262c7
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 38)
+HAS_SYSTEM_MPG123 = $(shell pkg-config libmpg123 --exists; echo $$?)
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 339)
+PLATFORM_STATIC_LIBRARIES = 
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1001/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6776
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :1
+# environment
+CONDA_EXE = /home/d5learner-01/anaconda3/bin/conda
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 173)
+PLATFORM_CFLAGS = -Wall -Werror=return-type
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 29)
+PLATFORM_OS = $(shell uname -s)
+# environment
+PWD = /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 273)
+OF_CORE_HEADER_PATHS = $(OF_LIBS_OPENFRAMEWORKS_PATH) $(OF_CORE_SOURCE_PATHS)
+# default
+.LOADED := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 57)
+HOST_ARCH = $(shell uname -m)
+# environment
+SSH_AGENT_PID = 2719
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/d5learner-01
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 98)
+SHARED_LIB_EXTENSION = so
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/d5learner-01/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
+# environment
+LOGNAME = d5learner-01
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# automatic
++F = $(notdir $+)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 235)
+ABI_LIB_SUBPATH = $(PLATFORM_LIB_SUBPATH)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 4)
+OF_SHARED_MAKEFILES_PATH = $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon
+# environment
+ZSH = /home/d5learner-01/.oh-my-zsh
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 23)
+PLATFORM_VARIANT = default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 342)
+OF_CORE_SOURCE_FILES = $(filter-out $(CORE_EXCLUSIONS),$(shell $(FIND) $(OF_CORE_SOURCE_PATHS) -name "*.cpp" -or -name "*.mm" -or -name "*.m" | grep -v "/\.[^\.]"))
+# environment
+LC_TIME = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 190)
+OF_PLATFORM_MAKEFILES = $(OF_LIBS_OF_COMPILED_PROJECT_PATH)/$(PLATFORM_LIB_SUBPATH)
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := Debug
+# environment
+QT_IM_MODULE = ibus
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 84)
+ABIS_TO_COMPILE = 
+# environment
+SHLVL = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 369)
+PLATFORM_LIBRARIES =  glut X11 Xrandr Xxf86vm Xi Xcursor dl pthread freeimage boost_filesystem boost_system pugixml uriparser Xinerama
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 183)
+OF_LIBS_OF_COMPILED_PROJECT_PATH = $(OF_LIBS_OF_COMPILED_PATH)/project
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 15)
+TARGET_NAME = Debug
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = d5learner-01
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 31)
+HOST_OS = $(shell uname -s)
+# environment
+LC_MONETARY = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 1)
+.DEFAULT_GOAL = Release
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 60)
+PLATFORM_ARCH = $(shell uname -m)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 174)
+PLATFORM_CXXFLAGS = -Wall -Werror=return-type -std=c++11
+# makefile (from 'Makefile', line 9)
+OF_ROOT = $(realpath ../../..)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 28)
+BIN_NAME = $(APPNAME)_debug
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 302)
+FAILED_PKG = $(shell for pkg in $(CORE_PKG_CONFIG_LIBRARIES); do $(PLATFORM_PKG_CONFIG) $$pkg --cflags > /dev/null; if [ $$? -ne 0 ]; then echo $$pkg; return; fi; done; echo 0)
+# environment
+ 
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 166)
+OF_EXAMPLES_PATH = $(OF_ROOT)/examples
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/d5learner-01/OF/apps/myApps
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1001/vscode-58c7a93b-1.59.1-main.sock
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 92)
+PLATFORM_DEFINES =  OF_USING_GTK OF_USING_MPG123
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 429)
+PLATFORM_LIBRARY_SEARCH_PATHS = 
+# makefile
+MAKEFLAGS = pqrRw
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 177)
+OF_LIBS_OPENFRAMEWORKS_PATH = $(OF_LIBS_PATH)/openFrameworks
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 270)
+PLATFORM_CORE_EXCLUSIONS =  %.mm %.m $(OF_LIBS_PATH)/openFrameworks/video/ofQtUtils.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofQuickTimeGrabber.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofQuickTimePlayer.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofDirectShowGrabber.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofDirectShowPlayer.cpp $(OF_LIBS_PATH)/openFrameworks/app/ofAppEGLWindow.cpp $(OF_LIBS_PATH)/glew/% $(OF_LIBS_PATH)/cairo/% $(OF_LIBS_PATH)/videoInput/% $(OF_LIBS_PATH)/freetype/% $(OF_LIBS_PATH)/FreeImage/% $(OF_LIBS_PATH)/assimp/% $(OF_LIBS_PATH)/rtAudio/% $(OF_LIBS_PATH)/openssl/% $(OF_LIBS_PATH)/boost/% $(OF_LIBS_PATH)/glfw/% $(OF_LIBS_PATH)/curl/% $(OF_LIBS_PATH)/uriparser/%
+# environment
+MFLAGS = -pqrRw
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/d5learner-01/.config/Code/exthost Crash Reports
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 301)
+PROJECT_ADDONS_OBJ_PATH = $(realpath .)/$(OF_PROJECT_OBJ_OUTPUT_PATH)addons/
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 265)
+ALL_OF_CORE_SOURCE_PATHS = $(shell $(FIND) $(OF_LIBS_OPENFRAMEWORKS_PATH) -maxdepth 1 -mindepth 1 -type d | grep -v "/\.[^\.]" )
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = fr_FR.UTF-8
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GSETTINGS_SCHEMA_DIR_CONDA_BACKUP = 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 8)
+APPNAME = $(shell basename `pwd`)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 111)
+CLEANTARGET = $(addprefix Clean,$(TARGET_NAME))
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 222)
+AVAILABLE_PLATFORM_VARIANTS = $(shell $(FIND) $(OF_PLATFORM_MAKEFILES)/config.*.mk -maxdepth 1 -type f | sed -E 's/.*\.([^\.]*)\.mk/\1/' ) default
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 408)
+PLATFORM_PKG_CONFIG_LIBRARIES =  cairo zlib gstreamer-app-$(GST_VERSION) gstreamer-$(GST_VERSION) gstreamer-video-$(GST_VERSION) gstreamer-base-$(GST_VERSION) libudev freetype2 fontconfig sndfile openal libcurl glfw3 rtaudio libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 277)
+ALL_OF_CORE_THIRDPARTY_HEADER_PATHS = $(shell $(FIND) $(OF_LIBS_PATH)/*/include -type d | grep -v "/\.[^\.]")
+# environment
+LC_NUMERIC = fr_FR.UTF-8
+# environment
+VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 31)
+HAS_SYSTEM_GTK2 = $(shell pkg-config gtk+-2.0 --exists; echo $$?)
+# environment
+LC_MEASUREMENT = fr_FR.UTF-8
+# environment
+PAGER = less
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 317)
+OF_CORE_INCLUDES_CFLAGS = $(addprefix -I,$(PLATFORM_HEADER_SEARCH_PATHS)) $(shell $(PLATFORM_PKG_CONFIG) "$(CORE_PKG_CONFIG_LIBRARIES)" --cflags) $(addprefix -I,$(OF_CORE_THIRDPARTY_HEADER_PATHS)) $(addprefix -I,$(OF_CORE_HEADER_PATHS))
+# environment
+CONDA_PYTHON_EXE = /home/d5learner-01/anaconda3/bin/python
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+P9K_TTY = old
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8009c9ac_5fca_4d2f_8129_adbd3cc548dd
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.264
+# default
+SUFFIXES := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk', line 30)
+PLATFORM_LDFLAGS = -Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections -fuse-ld=gold
+# environment
+_CE_M = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 288)
+CORE_PKG_CONFIG_LIBRARIES =  $(PLATFORM_PKG_CONFIG_LIBRARIES) $(PROJECT_PKG_CONFIG_LIBRARIES)
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 58)
+GST_VERSION = 1.0
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# environment
+CONDA_PREFIX = /home/d5learner-01/anaconda3
+# environment
+TERM = xterm-256color
+# environment
+_P9K_TTY = /dev/pts/0
+# environment
+VSCODE_PID = 6776
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 86)
+PLATFORM_LIB_SUBPATH = linux64
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 331)
+OF_CORE_BASE_CFLAGS = $(PLATFORM_CFLAGS)
+# environment
+_CE_CONDA = 
+# environment
+LANG = C
+# variable set hash-table stats:
+# Load=202/1024=20%, Rehash=0, Collisions=108/754=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/d5learner-01/OF/addons (device 2050, inode 42997130): No files, no impossibilities so far.
+# . (device 2050, inode 56110554): 14 files, no impossibilities.
+# / (device 2050, inode 2): No files, no impossibilities so far.
+# /etc (device 2050, inode 38797313): 249 files, no impossibilities.
+# /home/d5learner-01/OF/libs/openFrameworks (device 2050, inode 49027504): No files, no impossibilities so far.
+
+# 263 files, no impossibilities in 5 directories.
+
+# Implicit Rules
+
+%.res:
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 253):
+	@echo "Compiling Resource" $<
+	@echo MAINICON ICON \"$(shell cygpath -m $<)\" > $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.rc
+	@$(RESOURCE_COMPILER) $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.rc -O coff -o $@
+
+%.o: /%.cpp .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 263):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.cxx .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 268):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	@$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.cc .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 273):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.m .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 278):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.mm .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 283):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.c .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 288):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.S .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 293):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cpp .compiler_flags
+ 
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cxx .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.m .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.mm .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cc .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.c .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.S .compiler_flags
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cpp /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 358):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cxx /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 363):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cc /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 368):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.m /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 373):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.mm /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 378):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.c /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 383):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/addons/%.o: /home/d5learner-01/OF/addons/%.S /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 388):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+libs/openFrameworks/%.o: /home/d5learner-01/OF/libs/openFrameworks/%.cpp .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 396):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(OF_CORE_INCLUDES_CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)libs/openFrameworks/$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)libs/openFrameworks/$*.o -o $@ -c $<
+
+# 23 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+ReleaseABI: bin/Synthe_debug
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 169):
+	@$(MAKE) afterplatform BIN_NAME=$(BIN_NAME) ABIS_TO_COMPILE="$(ABIS_TO_COMPILE_RELEASE)" RUN_TARGET=$(RUN_TARGET) TARGET=$(TARGET)
+	@$(PROJECT_AFTER)
+
+CleanDebugABI:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 416):
+	rm -rf $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	rm -f $(TARGET)
+	rm -rf $(BIN_NAME)
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+all:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 180):
+	$(MAKE) Debug
+
+copyaddonsdata:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 447):
+	@echo
+	@echo "Copying addons data"
+	@mkdir -p bin/data
+	@cp -rf $(PROJECT_ADDONS_DATA) bin/data/
+
+AndroidDebug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 489):
+	$(MAKE) Debug PLATFORM_OS=Android
+
+.PHONY: all Debug Release after clean CleanDebug CleanRelease help force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CleanAndroid:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 492):
+	$(MAKE) clean PLATFORM_OS=Android
+
+DebugNoOF:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 158):
+	@echo Compiling $(APPNAME) for Debug
+	@$(MAKE) DebugABI
+
+AndroidRelease:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 486):
+	$(MAKE) Release PLATFORM_OS=Android
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-25 14:34:32.830680932
+#  File has been updated.
+#  Successfully updated.
+
+afterplatform: after
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 471):
+	@echo
+
+# 'override' directive
+Debug: .SHELLSTATUS := 0
+Debug:
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := Debug
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=9/32=28%, Rehash=0, Collisions=8/27=30%
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 138):
+	@echo Compiling OF library for Debug
+	$(MAKE) -C $(OF_ROOT)/libs/openFrameworksCompiled/project/ Debug PLATFORM_OS=$(PLATFORM_OS) ABIS_TO_COMPILE_DEBUG="$(ABIS_TO_COMPILE_DEBUG)"
+	@echo
+	@echo
+	@echo Compiling $(APPNAME) for Debug
+	@$(MAKE) DebugABI
+
+/home/d5learner-01/OF/addons/.compiler_flags: force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 208):
+	@mkdir -p $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@mkdir -p $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@if [ "$(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS))" != "$(strip $$(cat $@ 2>/dev/null))" ]; then echo $(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS)) > $@; fi
+
+.compiler_flags: force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 204):
+	@mkdir -p $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@if [ "$(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) $(OPTIMIZATION_LDFLAGS) $(LDFLAGS))" != "$(strip $$(cat $@ 2>/dev/null))" ]; then echo $(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) $(OPTIMIZATION_LDFLAGS) $(LDFLAGS)) > $@; fi
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 453):
+	@echo
+	@echo openFrameworks universal makefile
+	@echo
+	@echo "Targets:"
+	@echo
+	@echo "make Debug:		builds the library with debug symbols"
+	@echo "make Release:		builds the library with optimizations"
+	@echo "make:			= make Release"
+	@echo "make all:		= make Release"
+	@echo "make CleanDebug:	cleans the Debug target"
+	@echo "make CleanRelease:	cleans the Release target"
+	@echo "make clean:		cleans everything"
+	@echo "make help:		this help message"
+	@echo
+	@echo
+	@echo this should work with any OF app, just copy any example
+	@echo change the name of the folder and it should compile
+	@echo "only .cpp support, don't use .c files"
+	@echo it will look for files in any folder inside the application
+	@echo folder except that in the EXCLUDE_FROM_SOURCE variable.
+ 
+	@echo "it doesn't autodetect include paths yet"
+	@echo "add the include paths editing the var USER_CFLAGS"
+	@echo at the beginning of the makefile using the gcc syntax:
+	@echo -Ipath
+	@echo
+	@echo to add addons to your application, edit the addons.make file
+	@echo in this directory and add the names of the addons you want to
+	@echo include
+	@echo
+
+ReleaseNoOF:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 150):
+	@echo Compiling $(APPNAME) for Release
+	@$(MAKE) ReleaseABI
+
+force:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+RunRelease:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 191):
+	@cd bin;./$(BIN_NAME)
+
+Release:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 124):
+	@echo Compiling OF library for Release
+	@$(MAKE) -C $(OF_ROOT)/libs/openFrameworksCompiled/project/ Release PLATFORM_OS=$(PLATFORM_OS) ABIS_TO_COMPILE_RELEASE="$(ABIS_TO_COMPILE_RELEASE)"
+	@echo
+	@echo
+	@echo Compiling $(APPNAME) for Release
+	@$(MAKE) ReleaseABI
+
+CleanRelease:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+RunDebug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 198):
+	@cd bin;./$(BIN_NAME)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CleanDebug:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 422):
+	@$(MAKE) $(CLEANTARGET)ABI
+	@rm -rf bin/libs
+
+bin/Synthe_debug: .compiler_flags
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 403):
+	@echo 'Linking $(TARGET) for $(ABI_LIB_SUBPATH)'
+	@mkdir -p $(@D)
+	$(CXX) -o $@ $(OPTIMIZATION_LDFLAGS) $(OF_PROJECT_OBJS) $(OF_PROJECT_RESOURCES) $(OF_PROJECT_ADDONS_OBJS) $(TARGET_LIBS) $(OF_PROJECT_LIBS) $(LDFLAGS) $(OF_CORE_LIBS)
+
+# Not a target:
+config.make:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-25 14:34:32.830680932
+#  File has been updated.
+#  Successfully updated.
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 184):
+	@cd bin;./$(BIN_NAME)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 409):
+	@$(MAKE) CleanDebug
+	@$(MAKE) CleanRelease
+
+DebugABI: bin/Synthe_debug
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 176):
+	@$(MAKE) afterplatform BIN_NAME=$(BIN_NAME) ABIS_TO_COMPILE="$(ABIS_TO_COMPILE_DEBUG)" RUN_TARGET=$(RUN_TARGET) TARGET=$(TARGET)
+	@$(PROJECT_AFTER)
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+after: Debug
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 433):
+	-cp ${OF_LIBS_PATH}/*/lib/${PLATFORM_LIB_SUBPATH}/*.${SHARED_LIB_EXTENSION} bin/ ; true
+	@echo
+	@echo "     compiling done"
+	@echo "     to launch the application"
+	@echo
+	@echo "     cd bin"
+	@echo "     ./$(BIN_NAME)"
+	@echo "     "
+	@echo "     - or -"
+	@echo "     "
+	@echo "     $(MAKE) $(RUN_TARGET)"
+	@echo
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=34/1024=3%, Rehash=0, Collisions=1/74=1%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 327 / storage = 3821 B / avg = 11 B
+# current buf: size = 8162 B / used = 3821 B / count = 327 / avg = 11 B
+
+# strcache performance: lookups = 439 / hit rate = 25%
+# hash-table stats:
+# Load=327/8192=4%, Rehash=0, Collisions=22/439=5%
+# Finished Make data base on Wed Aug 25 14:35:39 2021
+
+# make[1]: Leaving directory '/home/d5learner-01/OF/apps/myApps/Synthe'
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Aug 25 14:35:39 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 257)
+CORE_EXCLUSIONS = $(strip $(PLATFORM_CORE_EXCLUSIONS))
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 343)
+OF_CORE_HEADER_FILES = $(filter-out $(CORE_EXCLUSIONS),$(shell $(FIND) $(OF_CORE_SOURCE_PATHS) -name "*.h" | grep -v "/\.[^\.]"))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 342)
+PLATFORM_SHARED_LIBRARIES = 
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+CONDA_MKL_INTERFACE_LAYER_BACKUP = 
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 332)
+OF_CORE_BASE_CXXFLAGS = $(PLATFORM_CXXFLAGS)
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1001/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 172)
+OF_LIBS_PATH = $(OF_ROOT)/libs
+# makefile
+SHELL = /bin/sh
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# environment
+JOURNAL_STREAM = 8:47242
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 211)
+PLATFORM_OPTIMIZATION_CFLAGS_RELEASE = -O3
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 30)
+HAS_SYSTEM_GTK3 = $(shell pkg-config gtk+-3.0 --exists; echo $$?)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 1)
+MAKEFILE_LIST :=  Makefile config.make /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk /home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 222)
+PLATFORM_OPTIMIZATION_CFLAGS_DEBUG = -g3
+# automatic
+@F = $(notdir $@)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 238)
+PLATFORM_PKG_CONFIG = pkg-config
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 163)
+OF_ADDONS_PATH = $(OF_ROOT)/addons
+# environment
+USERNAME = d5learner-01
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 66)
+CROSS_COMPILING = 0
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 196)
+OF_CORE_LIB_PATH = $(OF_LIBS_OF_COMPILED_PATH)/lib/$(PLATFORM_LIB_SUBPATH)
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1001/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 119)
+PLATFORM_REQUIRED_ADDONS = 
+# environment
+MANAGERPID = 2059
+# environment
+P9K_SSH = 0
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1001/vscode-ipc-29078984-e40f-4d20-b527-3dfb909927d8.sock
+# environment
+LC_NAME = fr_FR.UTF-8
+# environment
+VSCODE_CWD = /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 169)
+OF_APPS_PATH = $(OF_ROOT)/apps
+# environment
+GSETTINGS_SCHEMA_DIR = /home/d5learner-01/anaconda3/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/d5learner-01/anaconda3/bin:/home/d5learner-01/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+MKL_INTERFACE_LAYER = LP64,GNU
+# environment
+GPG_AGENT_INFO = /run/user/1001/gnupg/S.gpg-agent:0:1
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+PG_OF_PATH = /home/d5learner-01/OF
+# environment
+SESSION_MANAGER = local/CN-DATA8-01:@/tmp/.ICE-unix/2755,unix/CN-DATA8-01:/tmp/.ICE-unix/2755
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 180)
+OF_LIBS_OF_COMPILED_PATH = $(OF_LIBS_OPENFRAMEWORKS_PATH)Compiled
+# environment
+XDG_RUNTIME_DIR = /run/user/1001
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 40)
+FIND = find
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 324)
+OF_CORE_DEFINES_CFLAGS = $(addprefix -D,$(PLATFORM_DEFINES))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 288)
+PLATFORM_HEADER_SEARCH_PATHS = 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 268)
+OF_CORE_SOURCE_PATHS = $(filter-out $(CORE_EXCLUSIONS),$(ALL_OF_CORE_SOURCE_PATHS))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 280)
+OF_CORE_THIRDPARTY_HEADER_PATHS = $(filter-out $(CORE_EXCLUSIONS),$(ALL_OF_CORE_THIRDPARTY_HEADER_PATHS))
+# environment
+CONDA_PREFIX = /home/d5learner-01/anaconda3
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=ef268a63-9adf-4ad8-acc3-a988159a77d9&iid=ef268a63-9adf-4ad8-acc3-a988159a77d9&sid=ef268a63-9adf-4ad8-acc3-a988159a77d9","uploadToServer":true}
+# environment
+INVOCATION_ID = 71edf283da28449da67a1e3eee0262c7
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 38)
+HAS_SYSTEM_MPG123 = $(shell pkg-config libmpg123 --exists; echo $$?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 339)
+PLATFORM_STATIC_LIBRARIES = 
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1001/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6776
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :1
+# environment
+CONDA_EXE = /home/d5learner-01/anaconda3/bin/conda
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 173)
+PLATFORM_CFLAGS = -Wall -Werror=return-type
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 29)
+PLATFORM_OS = $(shell uname -s)
+# environment
+PWD = /home/d5learner-01/OF/apps/myApps/Synthe
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 273)
+OF_CORE_HEADER_PATHS = $(OF_LIBS_OPENFRAMEWORKS_PATH) $(OF_CORE_SOURCE_PATHS)
+# default
+.LOADED := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 57)
+HOST_ARCH = $(shell uname -m)
+# environment
+SSH_AGENT_PID = 2719
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/d5learner-01
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 98)
+SHARED_LIB_EXTENSION = so
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/d5learner-01/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
+# environment
+LOGNAME = d5learner-01
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# automatic
++F = $(notdir $+)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 235)
+ABI_LIB_SUBPATH = $(PLATFORM_LIB_SUBPATH)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 4)
+OF_SHARED_MAKEFILES_PATH = $(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon
+# environment
+ZSH = /home/d5learner-01/.oh-my-zsh
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 23)
+PLATFORM_VARIANT = default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 342)
+OF_CORE_SOURCE_FILES = $(filter-out $(CORE_EXCLUSIONS),$(shell $(FIND) $(OF_CORE_SOURCE_PATHS) -name "*.cpp" -or -name "*.mm" -or -name "*.m" | grep -v "/\.[^\.]"))
+# environment
+LC_TIME = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 190)
+OF_PLATFORM_MAKEFILES = $(OF_LIBS_OF_COMPILED_PROJECT_PATH)/$(PLATFORM_LIB_SUBPATH)
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 84)
+ABIS_TO_COMPILE = 
+# environment
+SHLVL = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 369)
+PLATFORM_LIBRARIES =  glut X11 Xrandr Xxf86vm Xi Xcursor dl pthread freeimage boost_filesystem boost_system pugixml uriparser Xinerama
+ 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 183)
+OF_LIBS_OF_COMPILED_PROJECT_PATH = $(OF_LIBS_OF_COMPILED_PATH)/project
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = d5learner-01
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 31)
+HOST_OS = $(shell uname -s)
+# environment
+LC_MONETARY = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 1)
+.DEFAULT_GOAL = Release
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 60)
+PLATFORM_ARCH = $(shell uname -m)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 174)
+PLATFORM_CXXFLAGS = -Wall -Werror=return-type -std=c++11
+# makefile (from 'Makefile', line 9)
+OF_ROOT = $(realpath ../../..)
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 302)
+FAILED_PKG = $(shell for pkg in $(CORE_PKG_CONFIG_LIBRARIES); do $(PLATFORM_PKG_CONFIG) $$pkg --cflags > /dev/null; if [ $$? -ne 0 ]; then echo $$pkg; return; fi; done; echo 0)
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 166)
+OF_EXAMPLES_PATH = $(OF_ROOT)/examples
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/d5learner-01/OF/apps/myApps
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1001/vscode-58c7a93b-1.59.1-main.sock
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 92)
+PLATFORM_DEFINES =  OF_USING_GTK OF_USING_MPG123
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 429)
+PLATFORM_LIBRARY_SEARCH_PATHS = 
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 177)
+OF_LIBS_OPENFRAMEWORKS_PATH = $(OF_LIBS_PATH)/openFrameworks
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 270)
+PLATFORM_CORE_EXCLUSIONS =  %.mm %.m $(OF_LIBS_PATH)/openFrameworks/video/ofQtUtils.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofQuickTimeGrabber.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofQuickTimePlayer.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofDirectShowGrabber.cpp $(OF_LIBS_PATH)/openFrameworks/video/ofDirectShowPlayer.cpp $(OF_LIBS_PATH)/openFrameworks/app/ofAppEGLWindow.cpp $(OF_LIBS_PATH)/glew/% $(OF_LIBS_PATH)/cairo/% $(OF_LIBS_PATH)/videoInput/% $(OF_LIBS_PATH)/freetype/% $(OF_LIBS_PATH)/FreeImage/% $(OF_LIBS_PATH)/assimp/% $(OF_LIBS_PATH)/rtAudio/% $(OF_LIBS_PATH)/openssl/% $(OF_LIBS_PATH)/boost/% $(OF_LIBS_PATH)/glfw/% $(OF_LIBS_PATH)/curl/% $(OF_LIBS_PATH)/uriparser/%
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/d5learner-01/.config/Code/exthost Crash Reports
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 301)
+PROJECT_ADDONS_OBJ_PATH = $(realpath .)/$(OF_PROJECT_OBJ_OUTPUT_PATH)addons/
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 265)
+ALL_OF_CORE_SOURCE_PATHS = $(shell $(FIND) $(OF_LIBS_OPENFRAMEWORKS_PATH) -maxdepth 1 -mindepth 1 -type d | grep -v "/\.[^\.]" )
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = fr_FR.UTF-8
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GSETTINGS_SCHEMA_DIR_CONDA_BACKUP = 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 8)
+APPNAME = $(shell basename `pwd`)
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 222)
+AVAILABLE_PLATFORM_VARIANTS = $(shell $(FIND) $(OF_PLATFORM_MAKEFILES)/config.*.mk -maxdepth 1 -type f | sed -E 's/.*\.([^\.]*)\.mk/\1/' ) default
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 408)
+PLATFORM_PKG_CONFIG_LIBRARIES =  cairo zlib gstreamer-app-$(GST_VERSION) gstreamer-$(GST_VERSION) gstreamer-video-$(GST_VERSION) gstreamer-base-$(GST_VERSION) libudev freetype2 fontconfig sndfile openal libcurl glfw3 rtaudio libpulse-simple alsa gl glu glew gtk+-3.0 libmpg123
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 277)
+ALL_OF_CORE_THIRDPARTY_HEADER_PATHS = $(shell $(FIND) $(OF_LIBS_PATH)/*/include -type d | grep -v "/\.[^\.]")
+# environment
+LC_NUMERIC = fr_FR.UTF-8
+# environment
+VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 31)
+HAS_SYSTEM_GTK2 = $(shell pkg-config gtk+-2.0 --exists; echo $$?)
+# environment
+LC_MEASUREMENT = fr_FR.UTF-8
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 317)
+OF_CORE_INCLUDES_CFLAGS = $(addprefix -I,$(PLATFORM_HEADER_SEARCH_PATHS)) $(shell $(PLATFORM_PKG_CONFIG) "$(CORE_PKG_CONFIG_LIBRARIES)" --cflags) $(addprefix -I,$(OF_CORE_THIRDPARTY_HEADER_PATHS)) $(addprefix -I,$(OF_CORE_HEADER_PATHS))
+# environment
+CONDA_PYTHON_EXE = /home/d5learner-01/anaconda3/bin/python
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+P9K_TTY = old
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8009c9ac_5fca_4d2f_8129_adbd3cc548dd
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.264
+# default
+SUFFIXES := 
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk', line 30)
+PLATFORM_LDFLAGS = -Wl,-rpath=./libs:./bin/libs -Wl,--as-needed -Wl,--gc-sections -fuse-ld=gold
+# environment
+_CE_M = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 288)
+CORE_PKG_CONFIG_LIBRARIES =  $(PLATFORM_PKG_CONFIG_LIBRARIES) $(PROJECT_PKG_CONFIG_LIBRARIES)
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = fr_FR.UTF-8
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 58)
+GST_VERSION = 1.0
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+_P9K_TTY = /dev/pts/0
+# environment
+VSCODE_PID = 6776
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 86)
+PLATFORM_LIB_SUBPATH = linux64
+# makefile (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk', line 331)
+OF_CORE_BASE_CFLAGS = $(PLATFORM_CFLAGS)
+# environment
+_CE_CONDA = 
+# variable set hash-table stats:
+# Load=197/1024=19%, Rehash=0, Collisions=109/710=15%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/d5learner-01/OF/addons (device 2050, inode 42997130): No files, no impossibilities so far.
+# . (device 2050, inode 56110554): 14 files, no impossibilities.
+# / (device 2050, inode 2): No files, no impossibilities so far.
+# /etc (device 2050, inode 38797313): 249 files, no impossibilities.
+# /home/d5learner-01/OF/libs/openFrameworks (device 2050, inode 49027504): No files, no impossibilities so far.
+
+# 263 files, no impossibilities in 5 directories.
+
+# Implicit Rules
+
+%.res:
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 253):
+	@echo "Compiling Resource" $<
+	@echo MAINICON ICON \"$(shell cygpath -m $<)\" > $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.rc
+	@$(RESOURCE_COMPILER) $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.rc -O coff -o $@
+
+%.o: /%.cpp .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 263):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.cxx .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 268):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	@$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.cc .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 273):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.m .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 278):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.mm .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 283):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.c .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 288):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+%.o: /%.S .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 293):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(PROJECT_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cpp .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cxx .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.m .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.mm .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.cc .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.c .compiler_flags
+
+/home/d5learner-01/OF/apps/myApps/Synthe/addons/%.o: %.S .compiler_flags
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cpp /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 358):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cxx /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 363):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.cc /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 368):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.m /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 373):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.mm /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 378):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/%.o: /home/d5learner-01/OF/addons/%.c /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 383):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+/home/d5learner-01/OF/addons/addons/%.o: /home/d5learner-01/OF/addons/%.S /home/d5learner-01/OF/addons/.compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 388):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CC) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.d -MT $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)$*.o -o $@ -c $<
+
+ 
+libs/openFrameworks/%.o: /home/d5learner-01/OF/libs/openFrameworks/%.cpp .compiler_flags
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 396):
+	@echo "Compiling" $<
+	@mkdir -p $(@D)
+	$(CXX) -c $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(OF_CORE_INCLUDES_CFLAGS) $(ADDON_INCLUDE_CFLAGS) -MMD -MP -MF $(OF_PROJECT_OBJ_OUTPUT_PATH)libs/openFrameworks/$*.d -MT $(OF_PROJECT_OBJ_OUTPUT_PATH)libs/openFrameworks/$*.o -o $@ -c $<
+
+# 23 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+ReleaseABI:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 169):
+	@$(MAKE) afterplatform BIN_NAME=$(BIN_NAME) ABIS_TO_COMPILE="$(ABIS_TO_COMPILE_RELEASE)" RUN_TARGET=$(RUN_TARGET) TARGET=$(TARGET)
+	@$(PROJECT_AFTER)
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/linux64/config.linux64.default.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+all:
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 180):
+	$(MAKE) Debug
+
+copyaddonsdata:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 447):
+	@echo
+	@echo "Copying addons data"
+	@mkdir -p bin/data
+	@cp -rf $(PROJECT_ADDONS_DATA) bin/data/
+
+AndroidDebug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 489):
+	$(MAKE) Debug PLATFORM_OS=Android
+
+.PHONY: all Debug Release after clean CleanDebug CleanRelease help force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CleanAndroid:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 492):
+	$(MAKE) clean PLATFORM_OS=Android
+
+DebugNoOF:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 158):
+	@echo Compiling $(APPNAME) for Debug
+	@$(MAKE) DebugABI
+
+AndroidRelease:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 486):
+	$(MAKE) Release PLATFORM_OS=Android
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-25 14:34:32.830680932
+#  File has been updated.
+#  Successfully updated.
+
+afterplatform: after
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk', line 471):
+	@echo
+
+Debug:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 138):
+	@echo Compiling OF library for Debug
+	$(MAKE) -C $(OF_ROOT)/libs/openFrameworksCompiled/project/ Debug PLATFORM_OS=$(PLATFORM_OS) ABIS_TO_COMPILE_DEBUG="$(ABIS_TO_COMPILE_DEBUG)"
+	@echo
+	@echo
+	@echo Compiling $(APPNAME) for Debug
+	@$(MAKE) DebugABI
+
+ABI:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 416):
+	rm -rf $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	rm -f $(TARGET)
+	rm -rf $(BIN_NAME)
+
+/home/d5learner-01/OF/addons/.compiler_flags: force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 208):
+	@mkdir -p $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@mkdir -p $(OF_ADDONS_PATH)/$(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@if [ "$(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS))" != "$(strip $$(cat $@ 2>/dev/null))" ]; then echo $(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS)) > $@; fi
+
+.compiler_flags: force
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 204):
+	@mkdir -p $(OF_PROJECT_OBJ_OUTPUT_PATH)
+	@if [ "$(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) $(OPTIMIZATION_LDFLAGS) $(LDFLAGS))" != "$(strip $$(cat $@ 2>/dev/null))" ]; then echo $(strip $(OPTIMIZATION_CFLAGS) $(CFLAGS) $(CXXFLAGS) $(PROJECT_INCLUDE_CFLAGS) $(OPTIMIZATION_LDFLAGS) $(LDFLAGS)) > $@; fi
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 453):
+	@echo
+	@echo openFrameworks universal makefile
+	@echo
+	@echo "Targets:"
+	@echo
+	@echo "make Debug:		builds the library with debug symbols"
+	@echo "make Release:		builds the library with optimizations"
+	@echo "make:			= make Release"
+	@echo "make all:		= make Release"
+	@echo "make CleanDebug:	cleans the Debug target"
+	@echo "make CleanRelease:	cleans the Release target"
+	@echo "make clean:		cleans everything"
+	@echo "make help:		this help message"
+	@echo
+	@echo
+	@echo this should work with any OF app, just copy any example
+	@echo change the name of the folder and it should compile
+	@echo "only .cpp support, don't use .c files"
+	@echo it will look for files in any folder inside the application
+	@echo folder except that in the EXCLUDE_FROM_SOURCE variable.
+	@echo "it doesn't autodetect include paths yet"
+	@echo "add the include paths editing the var USER_CFLAGS"
+	@echo at the beginning of the makefile using the gcc syntax:
+	@echo -Ipath
+	@echo
+	@echo to add addons to your application, edit the addons.make file
+	@echo in this directory and add the names of the addons you want to
+	@echo include
+	@echo
+
+ReleaseNoOF:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 150):
+	@echo Compiling $(APPNAME) for Release
+	@$(MAKE) ReleaseABI
+
+force:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+RunRelease:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 191):
+	@cd bin;./$(BIN_NAME)
+
+Release:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 124):
+	@echo Compiling OF library for Release
+	@$(MAKE) -C $(OF_ROOT)/libs/openFrameworksCompiled/project/ Release PLATFORM_OS=$(PLATFORM_OS) ABIS_TO_COMPILE_RELEASE="$(ABIS_TO_COMPILE_RELEASE)"
+	@echo
+	@echo
+	@echo Compiling $(APPNAME) for Release
+	@$(MAKE) ReleaseABI
+
+CleanRelease:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+RunDebug:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 198):
+	@cd bin;./$(BIN_NAME)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CleanDebug:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+config.make:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-25 14:34:32.830680932
+#  File has been updated.
+#  Successfully updated.
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 184):
+	@cd bin;./$(BIN_NAME)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 409):
+	@$(MAKE) CleanDebug
+	@$(MAKE) CleanRelease
+
+DebugABI:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 176):
+	@$(MAKE) afterplatform BIN_NAME=$(BIN_NAME) ABIS_TO_COMPILE="$(ABIS_TO_COMPILE_DEBUG)" RUN_TARGET=$(RUN_TARGET) TARGET=$(TARGET)
+	@$(PROJECT_AFTER)
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.shared.mk:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+after:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from '/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk', line 433):
+	-cp ${OF_LIBS_PATH}/*/lib/${PLATFORM_LIB_SUBPATH}/*.${SHARED_LIB_EXTENSION} bin/ ; true
+	@echo
+	@echo "     compiling done"
+	@echo "     to launch the application"
+	@echo
+	@echo "     cd bin"
+	@echo "     ./$(BIN_NAME)"
+	@echo "     "
+	@echo "     - or -"
+	@echo "     "
+	@echo "     $(MAKE) $(RUN_TARGET)"
+	@echo
+
+# Not a target:
+/home/d5learner-01/OF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-24 20:23:00
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=33/1024=3%, Rehash=0, Collisions=1/68=1%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 326 / storage = 3794 B / avg = 11 B
+# current buf: size = 8162 B / used = 3794 B / count = 326 / avg = 11 B
+
+# strcache performance: lookups = 431 / hit rate = 24%
+# hash-table stats:
+# Load=326/8192=4%, Rehash=0, Collisions=20/431=5%
+# Finished Make data base on Wed Aug 25 14:35:39 2021
+
+ 
