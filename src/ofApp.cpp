@@ -2,6 +2,8 @@
 #include "FT.h"
 #include <cmath>
 #include <string>
+#include "carre.h"
+#include "dent_scie.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
