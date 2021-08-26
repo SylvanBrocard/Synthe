@@ -1,7 +1,8 @@
 #include <complex>
 #include <math.h>
+#include <FT.h>
 
-void FT(float *buffer, int buffer_size, float* bands, int n_bands)
+void FT(std::vector<float> buffer, int buffer_size, float* bands, int n_bands)
 {
     std::complex<float> integral;
     const std::complex<float> I(0.0,1.0);

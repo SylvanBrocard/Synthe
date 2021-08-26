@@ -1,3 +1,5 @@
 #pragma once
 
-void FT(float *, int , float* , int);
+#include "ofMain.h"
+
+void FT(std::vector<float>, int , float* , int);
