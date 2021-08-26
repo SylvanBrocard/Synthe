@@ -42,6 +42,4 @@ class ofApp : public ofBaseApp{
 		float 	phaseAdderTarget;
 		int n_bands         =512;
 		float spectre[512];
-
-		float sampling_rate = 44100.0;
 };
