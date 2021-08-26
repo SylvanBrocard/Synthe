@@ -13,7 +13,7 @@ void ofApp::setup(){
 	// phaseAdderTarget 	= 0.0f;
 	volume				= 0.1f;
 	bNoise 				= false;
-	octave				= 0;
+	octave				= 3;
 	pan 				= 0.5;
 	FreqPlayed 			= 30.0;
 
@@ -106,28 +106,28 @@ void ofApp::draw(){
 	ofPopStyle();
 
 	// draw the right channel:
-	// ofPushStyle();
-	// 	ofPushMatrix();
-	// 	ofTranslate(32, 350, 0);
+	ofPushStyle();
+		ofPushMatrix();
+		ofTranslate(32, 350, 0);
 			
-	// 	ofSetColor(225);
-	// 	ofDrawBitmapString("Right Channel", 4, 18);
+		ofSetColor(225);
+		ofDrawBitmapString("Right Channel", 4, 18);
 		
-	// 	ofSetLineWidth(1);	
-	// 	ofDrawRectangle(0, 0, 900, 200);
+		ofSetLineWidth(1);	
+		ofDrawRectangle(0, 0, 900, 200);
 
-	// 	ofSetColor(245, 58, 135);
-	// 	ofSetLineWidth(3);
+		ofSetColor(245, 58, 135);
+		ofSetLineWidth(3);
 					
-	// 		ofBeginShape();
-	// 		for (unsigned int i = 0; i < rAudio.size(); i++){
-	// 			float x =  ofMap(i, 0, rAudio.size(), 0, 900, true);
-	// 			ofVertex(x, 100 -rAudio[i]*180.0f);
-	// 		}
-	// 		ofEndShape(false);
+			ofBeginShape();
+			for (unsigned int i = 0; i < rAudio.size(); i++){
+				float x =  ofMap(i, 0, rAudio.size(), 0, 900, true);
+				ofVertex(x, 100 -rAudio[i]*180.0f);
+			}
+			ofEndShape(false);
 			
-	// 	ofPopMatrix();
-	// ofPopStyle();
+		ofPopMatrix();
+	ofPopStyle();
 	
 		
 	ofSetColor(225);
@@ -160,6 +160,56 @@ void ofApp::keyPressed  (int key){
 		soundStream.stop();
 	}
 	
+	// to associate a key played on the keyboard to a frequency to play
+	
+	if( key == 'q' ){
+		FreqPlayed = 32.703 * pow(2,octave);
+	
+	}
+	
+	if( key == 'z' ){
+		FreqPlayed = 34.648 * pow(2,octave);
+	}
+
+	if( key == 's' ){
+		FreqPlayed = 36.708 * pow(2,octave);
+	}
+	
+	if( key == 'e' ){
+		FreqPlayed = 38.891 * pow(2,octave);
+	}
+
+	if( key == 'd' ){
+		FreqPlayed = 41.203 * pow(2,octave);
+	}
+	
+	if( key == 'f' ){
+		FreqPlayed = 43.654 * pow(2,octave);
+	}
+
+	if( key == 't' ){
+		FreqPlayed = 46.249 * pow(2,octave);
+	}
+	
+	if( key == 'g' ){
+		FreqPlayed = 48.999 * pow(2,octave);
+	}
+
+	if( key == 'y' ){
+		FreqPlayed = 51.913 * pow(2,octave);
+	}
+	
+	if( key == 'h' ){
+		FreqPlayed = 55.000 * pow(2,octave);
+	}
+
+	if( key == 'u' ){
+		FreqPlayed = 58.270 * pow(2,octave);
+	}
+	
+	if( key == 'j' ){
+		FreqPlayed = 61.735 * pow(2,octave);
+	}
 }
 
 //--------------------------------------------------------------
@@ -230,14 +280,12 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 	 
 	
 	for (size_t i = 0; i < buffer.getNumFrames(); i++){
-		phase += TWO_PI * FreqPlayed * (i/44100); // i transformé en temps t
+		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
 		float sample = sin(phase);
 		lAudio[i] = sample * volume * pan ; //sortie visuelle
 		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
 
-
-		// rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
-		// printf("%.4f ",)
+		rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
 	}
 	
 
@@ -251,59 +299,5 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
-}
-
-//--------------------------------------------------------------
-void ofApp::keyNoteAssociation(int key){
-	// associates a key played on the keyboard to a frequency to play
-	
-	if( key == 'q' ){
-		FreqPlayed = 32.703 * pow(2,octave);
-	
-	}
-	
-	if( key == 'z' ){
-		FreqPlayed = 34.648 * pow(2,octave);
-	}
-
-	if( key == 's' ){
-		FreqPlayed = 36.708 * pow(2,octave);
-	}
-	
-	if( key == 'e' ){
-		FreqPlayed = 38.891 * pow(2,octave);
-	}
-
-	if( key == 'd' ){
-		FreqPlayed = 41.203 * pow(2,octave);
-	}
-	
-	if( key == 'f' ){
-		FreqPlayed = 43.654 * pow(2,octave);
-	}
-
-	if( key == 't' ){
-		FreqPlayed = 46.249 * pow(2,octave);
-	}
-	
-	if( key == 'g' ){
-		FreqPlayed = 48.999 * pow(2,octave);
-	}
-
-	if( key == 'y' ){
-		FreqPlayed = 51.913 * pow(2,octave);
-	}
-	
-	if( key == 'h' ){
-		FreqPlayed = 55.000 * pow(2,octave);
-	}
-
-	if( key == 'u' ){
-		FreqPlayed = 58.270 * pow(2,octave);
-	}
-	
-	if( key == 'j' ){
-		FreqPlayed = 61.735 * pow(2,octave);
-	}
 }
 
