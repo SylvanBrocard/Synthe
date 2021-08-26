@@ -11,6 +11,6 @@ void FT(float *buffer, int buffer_size, float* bands, int n_bands)
         for(int j = 0; j < buffer_size; j++){
             integral += buffer[j] * std::exp(I * (float)(j * i));
         }
-        bands[i] = integral.real() / sqrt(2 * M_PIf32);
+        bands[i] = std::abs(integral) / sqrt(2 * M_PIf32);
     }
 }
