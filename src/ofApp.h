@@ -40,4 +40,6 @@ class ofApp : public ofBaseApp{
 		float 	phase;
 		float 	phaseAdder;
 		float 	phaseAdderTarget;
+		int n_bands         =512;
+		float spectre[512];
 };
