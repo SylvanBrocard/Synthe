@@ -1,6 +1,7 @@
 #include "ofApp.h"
 #include "FT.h"
 #include "carre.h"
+#include "dent_scie.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -232,7 +233,7 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 		phaseAdder = 0.95f * phaseAdder + 0.05f * phaseAdderTarget;
 		for (size_t i = 0; i < buffer.getNumFrames(); i++){
 			phase += phaseAdder;
-			float sample = carre(phase);
+			float sample = dentScie(phase);
 			lAudio[i] = buffer[i*buffer.getNumChannels()    ] = sample * volume * leftScale;
 			rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * rightScale;
 		}
