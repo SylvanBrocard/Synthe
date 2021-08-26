@@ -78,6 +78,7 @@ void ofApp::draw(){
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
 	ofDrawBitmapString("press 'x' to unpause the audio\npress 'c' to pause the audio", 31, 92);
+	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 33, 92);
 	
 	ofNoFill();
 	
@@ -131,7 +132,7 @@ void ofApp::draw(){
 	
 		
 	ofSetColor(225);
-	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\npan: ("+ofToString(pan, 2)+") modify with mouse x\nsynthesis: ";
+	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\noctave: ("+ofToString(octave, 0)+") modify with O/L keys\nsynthesis: ";
 	if( !bNoise ){
 		reportString += "sine wave (" + ofToString(FreqPlayed, 2) + "hz) modify with mouse y";
 	}else{
@@ -209,6 +210,15 @@ void ofApp::keyPressed  (int key){
 	
 	if( key == 'j' ){
 		FreqPlayed = 61.735 * pow(2,octave);
+	}
+
+	// to change the octave
+	if (key == 'o'){
+		octave += 1;
+		octave = MIN(octave, 10);
+	} else if (key == 'l'){
+		octave -= 1;
+		octave = MAX(octave, 0);
 	}
 }
 
