@@ -21,6 +21,8 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+
+		void keyNoteAssociation(int key);
 		
 		void audioOut(ofSoundBuffer & buffer);
 		
@@ -40,4 +42,8 @@ class ofApp : public ofBaseApp{
 		float 	phase;
 		float 	phaseAdder;
 		float 	phaseAdderTarget;
+		float   octave;
+		float	FreqPlayed;
+	
+
 };
