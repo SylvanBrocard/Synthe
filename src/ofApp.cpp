@@ -1,6 +1,7 @@
 #include "ofApp.h"
 #include "FT.h"
 #include <cmath>
+#include <string>
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -81,6 +82,7 @@ void ofApp::draw(){
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
 	ofDrawBitmapString("press 'x' to unpause the audio\npress 'c' to pause the audio", 31, 92);
+	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 31, 120);
 	
 	ofNoFill();
 	
@@ -135,9 +137,9 @@ void ofApp::draw(){
 	
 		
 	ofSetColor(225);
-	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\npan: ("+ofToString(pan, 2)+") modify with mouse x\nsynthesis: ";
+	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\noctave: ("+ofToString(octave, 0)+") modify with O/L keys\nsynthesis: ";
 	if( !bNoise ){
-		reportString += "sine wave (" + ofToString(FreqPlayed, 2) + "hz) modify with mouse y";
+		reportString += "sine wave (" + ofToString(FreqPlayed, 2) + ")\nKey played : " + note;
 	}else{
 		reportString += "noise";	
 	}
@@ -168,51 +170,72 @@ void ofApp::keyPressed  (int key){
 	
 	if( key == 'q' ){
 		FreqPlayed = 32.703 * pow(2,octave);
+		note = "DO";
 	
 	}
 	
 	if( key == 'z' ){
 		FreqPlayed = 34.648 * pow(2,octave);
+		note = "DO#";
 	}
 
 	if( key == 's' ){
 		FreqPlayed = 36.708 * pow(2,octave);
+		note = "RE";
 	}
 	
 	if( key == 'e' ){
 		FreqPlayed = 38.891 * pow(2,octave);
+		note = "RE#";
 	}
 
 	if( key == 'd' ){
 		FreqPlayed = 41.203 * pow(2,octave);
+		note = "MI";
 	}
 	
 	if( key == 'f' ){
 		FreqPlayed = 43.654 * pow(2,octave);
+		note = "FA";
 	}
 
 	if( key == 't' ){
 		FreqPlayed = 46.249 * pow(2,octave);
+		note ="FA#";
 	}
 	
 	if( key == 'g' ){
 		FreqPlayed = 48.999 * pow(2,octave);
+		note = "SOL";
 	}
 
 	if( key == 'y' ){
 		FreqPlayed = 51.913 * pow(2,octave);
+		note = "SOL#";
 	}
 	
 	if( key == 'h' ){
 		FreqPlayed = 55.000 * pow(2,octave);
+		note = "LA";
 	}
 
 	if( key == 'u' ){
 		FreqPlayed = 58.270 * pow(2,octave);
+		note = "LA#";
 	}
 	
 	if( key == 'j' ){
 		FreqPlayed = 61.735 * pow(2,octave);
+		note = "SI";
+	}
+
+	// to change the octave
+	if (key == 'o'){
+		octave += 1;
+		octave = MIN(octave, 6);
+	} else if (key == 'l'){
+		octave -= 1;
+		octave = MAX(octave, 0);
 	}
 }
 
