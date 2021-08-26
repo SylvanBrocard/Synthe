@@ -6,6 +6,10 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	gui.setup(); // to draw radius slider
+	gui.add(brillance.setup("brillance", 0, 0, 1)); // to draw brillance slider
+
+
 	ofBackground(34, 34, 34);
 	
 	int bufferSize		= 512;
@@ -78,6 +82,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+	gui.draw(); // to draw radius slider
 
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);

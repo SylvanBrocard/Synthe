@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include <string>
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -47,5 +48,7 @@ class ofApp : public ofBaseApp{
 		float	FreqPlayed;
 		std::string	note;	
 	
+		ofxFloatSlider brillance; // to draw radius slider
+		ofxPanel gui; // to draw radius slider
 
 };
