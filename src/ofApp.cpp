@@ -120,9 +120,9 @@ void ofApp::draw(){
 					
 			ofBeginShape();
 			FT(lAudio,lAudio.size(), spectre, n_bands);
-			for (unsigned int i = 0; i < n_bands; i++){
+			for (unsigned int i = 0; i < n_bands * 0.68; i++){
 				float x =  ofMap(i, 0, n_bands, 0, 900, true);
-				ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
+				ofVertex(x / 0.68, 200 -spectre[i]*180.0f*0.1f);
 			}
 			ofEndShape(false);
 			
