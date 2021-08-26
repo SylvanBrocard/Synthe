@@ -13,6 +13,8 @@ void ofApp::setup(){
 	phaseAdderTarget 	= 0.0f;
 	volume				= 0.1f;
 	bNoise 				= false;
+	int n_bands         =512;
+	float spectre[512];
 
 	lAudio.assign(bufferSize, 0.0);
 	rAudio.assign(bufferSize, 0.0);
@@ -84,7 +86,7 @@ void ofApp::draw(){
 		ofTranslate(32, 150, 0);
 			
 		ofSetColor(225);
-		ofDrawBitmapString("Left Channel", 4, 18);
+		ofDrawBitmapString("son", 4, 18);
 		
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
@@ -108,7 +110,7 @@ void ofApp::draw(){
 		ofTranslate(32, 350, 0);
 			
 		ofSetColor(225);
-		ofDrawBitmapString("Right Channel", 4, 18);
+		ofDrawBitmapString("spectre", 4, 18);
 		
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
@@ -117,9 +119,10 @@ void ofApp::draw(){
 		ofSetLineWidth(3);
 					
 			ofBeginShape();
-			for (unsigned int i = 0; i < rAudio.size(); i++){
-				float x =  ofMap(i, 0, rAudio.size(), 0, 900, true);
-				ofVertex(x, 100 -rAudio[i]*180.0f);
+			FT(lAudio,lAudio.size(), spectre, n_bands);
+			for (unsigned int i = 0; i < n_bands; i++){
+				float x =  ofMap(i, 0, n_bands, 0, 900, true);
+				ofVertex(x, 100 -spectre[i]*180.0f);
 			}
 			ofEndShape(false);
 			
