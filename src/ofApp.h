@@ -21,7 +21,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+				
 		void audioOut(ofSoundBuffer & buffer);
 		
 		
@@ -40,4 +40,10 @@ class ofApp : public ofBaseApp{
 		float 	phase;
 		float 	phaseAdder;
 		float 	phaseAdderTarget;
+		int n_bands         =512;
+		float spectre[512];
+		float   octave;
+		float	FreqPlayed;
+	
+
 };
