@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include <string>
 
 class ofApp : public ofBaseApp{
 
@@ -42,6 +43,7 @@ class ofApp : public ofBaseApp{
 		float 	phaseAdderTarget;
 		float   octave;
 		float	FreqPlayed;
+		std::string	note;	
 	
 
 };
