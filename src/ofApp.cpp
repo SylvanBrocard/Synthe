@@ -2,6 +2,7 @@
 #include "FT.h"
 #include <cmath>
 #include <string>
+#include "ftinverse.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -15,15 +16,17 @@ void ofApp::setup(){
 	// phaseAdderTarget 	= 0.0f;
 	volume				= 0.1f;
 	bNoise 				= false;
-	int n_bands         =512;
-	float spectre[512];
+	
 	octave				= 3;
 	pan 				= 0.5;
 	FreqPlayed 			= 30.0;
 
 	lAudio.assign(bufferSize, 0.0);
 	rAudio.assign(bufferSize, 0.0);
-	
+	spectre.assign(bufferSize, 0.0);
+	spectreInverse.assign(bufferSize, 0.0);
+	cplx_spectrum.assign(bufferSize, {0.0,0.0});
+
 	soundStream.printDeviceList();
 
 	ofSoundStreamSettings settings;
@@ -125,7 +128,7 @@ void ofApp::draw(){
 		ofSetLineWidth(3);
 					
 			ofBeginShape();
-			FT(lAudio,lAudio.size(), spectre, n_bands);
+			FT(lAudio,lAudio.size(), spectre, n_bands, cplx_spectrum);
 			for (unsigned int i = 0; i < n_bands; i++){
 				float x =  ofMap(i, 0, n_bands, 0, 900, true);
 				ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
@@ -135,6 +138,32 @@ void ofApp::draw(){
 		ofPopMatrix();
 	ofPopStyle();
 	
+	// FT inverse affichage
+
+	ofPushStyle();
+		ofPushMatrix();
+		ofTranslate(32, 550, 0);
+			
+		ofSetColor(225);
+		ofDrawBitmapString("son", 4, 18);
+		
+		ofSetLineWidth(1);	
+		ofDrawRectangle(0, 0, 900, 200);
+
+		ofSetColor(245, 58, 135);
+		ofSetLineWidth(3);
+					
+			ofBeginShape();
+			ftinverse(cplx_spectrum,n_bands, spectreInverse, spectreInverse.size());
+			for (unsigned int i = 0; i < n_bands; i++){
+				float x =  ofMap(i, 0, spectreInverse.size(), 0, 900, true);
+				ofVertex(x, 100 -spectreInverse[i]*180.0f);
+			}
+			ofEndShape(false);
+			
+		ofPopMatrix();
+	ofPopStyle();
+
 		
 	ofSetColor(225);
 	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\noctave: ("+ofToString(octave, 0)+") modify with O/L keys\nsynthesis: ";

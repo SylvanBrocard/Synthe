@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include <string>
+#include <complex>
+
 
 class ofApp : public ofBaseApp{
 
@@ -41,8 +43,10 @@ class ofApp : public ofBaseApp{
 		float 	phase;
 		float 	phaseAdder;
 		float 	phaseAdderTarget;
-		int n_bands         =512;
-		float spectre[512];
+		int n_bands=512;
+		vector <float> spectre;
+		vector <float> spectreInverse;
+		vector <std::complex<float>> cplx_spectrum;
 		float   octave;
 		float	FreqPlayed;
 		std::string	note;	

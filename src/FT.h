@@ -2,5 +2,4 @@
 
 #include "ofMain.h"
 
-void FT(std::vector<float>, int , float* , int);
-const float sampling_rate = 44100.0;
+void FT(std::vector<float>&, int , std::vector<float>& , int, std::vector<std::complex<float>>&);

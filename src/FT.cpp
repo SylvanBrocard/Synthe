@@ -1,8 +1,9 @@
 #include <complex>
 #include <math.h>
 #include <FT.h>
+#include <constante.h>
 
-void FT(std::vector<float> buffer, int buffer_size, float* bands, int n_bands)
+void FT(std::vector<float>& buffer, int buffer_size, std::vector<float>& bands, int n_bands, std::vector<std::complex<float>>& cplx_spectrum)
 {
     std::complex<float> integral;
     const std::complex<float> I(0.0,1.0);
@@ -17,5 +18,7 @@ void FT(std::vector<float> buffer, int buffer_size, float* bands, int n_bands)
             integral += buffer[j] * std::exp(I * (float)(omega * t));
         }
         bands[i] = std::abs(integral) / sqrt(2 * M_PIf32);
+        cplx_spectrum[i] = integral / sqrt(2 * M_PIf32);
+
     }
 }
