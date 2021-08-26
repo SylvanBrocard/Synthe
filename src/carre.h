@@ -2,4 +2,5 @@
 
 #include "ofMain.h"
 
-float carre(float phase);
+float carre(float, float);
+

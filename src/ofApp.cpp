@@ -4,12 +4,13 @@
 #include <string>
 #include "carre.h"
 #include "dent_scie.h"
+#include "brillance.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
 	gui.setup(); // to draw radius slider
-	gui.add(brillance.setup("brillance", 0, 0, 1)); // to draw brillance slider
+	gui.add(brillance.setup("brillance", 0, 0, 2)); // to draw brillance slider
 
 
 	ofBackground(34, 34, 34);
@@ -316,7 +317,7 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 	
 	for (size_t i = 0; i < buffer.getNumFrames(); i++){
 		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
-		float sample = sin(phase);
+		float sample = representation(phase, brillance);
 		lAudio[i] = sample * volume * pan ; //sortie visuelle
 		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
 
