@@ -17,7 +17,7 @@ void ftinverse(std::vector<std::complex<float>>& bands, int bands_size, std::vec
         for(int i = 0; i < bands_size; i++){
             float omega = i * 2* M_PIf32 * freq_max / n_signal;
             
-            integral += bands[j] * std::exp(-I * (float)(omega * t));
+            integral += bands[j] * std::exp(I * (float)(omega * t));
         }
 
         signal[j] = integral.real() / sqrt(2 * M_PIf32);

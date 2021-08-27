@@ -131,7 +131,8 @@ void ofApp::draw(){
 			FT(lAudio,lAudio.size(), spectre, n_bands, cplx_spectrum);
 			for (unsigned int i = 0; i < n_bands; i++){
 				float x =  ofMap(i, 0, n_bands, 0, 900, true);
-				ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
+				ofVertex(x, 200 -std::abs(cplx_spectrum[i])*180.0f*0.1f);
+				// ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
 			}
 			ofEndShape(false);
 			

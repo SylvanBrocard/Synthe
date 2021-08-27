@@ -15,7 +15,7 @@ void FT(std::vector<float>& buffer, int buffer_size, std::vector<float>& bands, 
         float omega = i * 2* M_PIf32 * freq_max / n_bands;
         for(int j = 0; j < buffer_size; j++){
             float t = j / sampling_rate;
-            integral += buffer[j] * std::exp(I * (float)(omega * t));
+            integral += buffer[j] * std::exp(-I * (float)(omega * t));
         }
         bands[i] = std::abs(integral) / sqrt(2 * M_PIf32);
         cplx_spectrum[i] = integral / sqrt(2 * M_PIf32);
