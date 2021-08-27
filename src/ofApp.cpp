@@ -2,7 +2,6 @@
 #include "FT.h"
 #include <cmath>
 #include <string>
-#include "ftinverse.h"
 #include "bandPass.h"
 #include "brillance.h"
 
