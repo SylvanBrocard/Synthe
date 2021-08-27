@@ -1,12 +1,13 @@
 #include "bandPass.h"
+#include "constante.h"
 #include <math.h>
 
 float bandPass(std::vector<float>& rawValues, std::vector<float>& filteredValues, float freqMin, float freqMax)
 {
     float frequencyCenter, bandWidth;
 
-    frequencyCenter = (freqMin + freqMax) / 4.0;
-    bandWidth = std::abs(freqMax - freqMin) / 2.0;
+    frequencyCenter = (freqMin + freqMax) / sampling_rate / 2.0;
+    bandWidth = std::abs(freqMax - freqMin) / sampling_rate / 2.0;
 
     float r = 1.0 - 3.0 * bandWidth;
     float k = (1.0 - 2.0 * r *cos(2.0 * M_PIf32 * frequencyCenter) + r * r)/(2.0 - 2.0 * cos(2.0  * M_PIf32 * frequencyCenter));

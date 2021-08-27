@@ -5,14 +5,15 @@
 #include "bandPass.h"
 #include "bandReject.h"
 #include "brillance.h"
+#include "constante.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
 	gui.setup(); // to draw sliders
 	gui.add(brillance.setup("Brillance", 0, 0, 2)); // to draw brillance slider
-	gui.add(x1.setup("Frequence basse", 0, 0, 1)); // to draw x1 filter slider
-	gui.add(x2.setup("Frequence haute", 1, 0, 1)); // to draw x2 filter slider
+	gui.add(x1.setup("Frequence basse", 0, 0, sampling_rate / 2.0)); // to draw x1 filter slider
+	gui.add(x2.setup("Frequence haute", sampling_rate / 2.0, 0, sampling_rate / 2.0)); // to draw x2 filter slider
 
 
 
@@ -140,7 +141,7 @@ void ofApp::draw(){
 
 		ofSetColor(100);
 		ofFill();
-		ofDrawRectangle(x1*900, 0, (x2-x1)*900, 200);
+		ofDrawRectangle(x1*900 / sampleRate * 2.0, 0, (x2-x1)*900 / sampleRate * 2.0, 200);
 		ofNoFill();
 		ofSetColor(245, 58, 135);
 		ofSetLineWidth(3);
