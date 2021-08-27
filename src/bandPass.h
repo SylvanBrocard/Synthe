@@ -2,4 +2,4 @@
 
 #include "ofMain.h"
 
-float bandPass(std::vector<float>, std::vector<float>, float, float);
+float bandPass(std::vector<float>&, std::vector<float>&, float, float);

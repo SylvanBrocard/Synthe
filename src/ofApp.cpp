@@ -359,7 +359,7 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
 		float sample = representation(phase, brillance);
 		rawValues[0] = sample;
-		sample = bandPass(rawValues, filteredValues, 0.2, 0.1);
+		sample = bandPass(rawValues, filteredValues, x1, x2);
 		lAudio[i] = sample * volume * pan ; //sortie visuelle
 		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
 
