@@ -71,6 +71,13 @@ void ofApp::setup(){
 
 	// on OSX: if you want to use ofSoundPlayer together with ofSoundStream you need to synchronize buffersizes.
 	// use ofFmodSetBuffersize(bufferSize) to set the buffersize in fmodx prior to loading a file.
+    
+	image.load("/home/d5learner-10/DATA5_modules/C++/OF/apps/myApps/Synthe/bin/boutonActivationPiano.png");
+    image2.load("/home/d5learner-10/DATA5_modules/C++/OF/apps/myApps/Synthe/bin/Piano.png");
+    // image.rotate90(1);
+    // image2.rotate90(1);
+
+
 }
 
 
@@ -173,7 +180,15 @@ void ofApp::draw(){
 		reportString += "noise";	
 	}
 	ofDrawBitmapString(reportString, 32, 579);
-
+  
+//   image.setAnchorPoint(1,1);
+  image.draw(ofGetWidth()/2 - image.getWidth() / 2, 10);  
+  image.resize(50,50);
+  
+//   image2.setAnchorPoint(180,10);
+  image2.draw(ofGetWidth() - image.getWidth() , 0);  
+  
+  image2.resize(200,50);
 }
 
 

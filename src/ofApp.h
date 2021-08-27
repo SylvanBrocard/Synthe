@@ -49,7 +49,9 @@ class ofApp : public ofBaseApp{
 		vector <std::complex<float>> cplx_spectrum;
 		float   octave;
 		float	FreqPlayed;
-		std::string	note;	
+		std::string	note;
+		ofImage image;
+        ofImage image2;	
 	
 
 };
