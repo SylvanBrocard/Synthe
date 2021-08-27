@@ -3,6 +3,7 @@
 #include <cmath>
 #include <string>
 #include "ftinverse.h"
+#include "bandPass.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -26,6 +27,9 @@ void ofApp::setup(){
 	spectre.assign(bufferSize, 0.0);
 	spectreInverse.assign(bufferSize, 0.0);
 	cplx_spectrum.assign(bufferSize, {0.0,0.0});
+
+	rawValues.assign(3, 0.0);
+	filteredValues.assign(3, 0.0);
 
 	soundStream.printDeviceList();
 
@@ -141,29 +145,29 @@ void ofApp::draw(){
 	
 	// FT inverse affichage
 
-	ofPushStyle();
-		ofPushMatrix();
-		ofTranslate(32, 550, 0);
+	// ofPushStyle();
+	// 	ofPushMatrix();
+	// 	ofTranslate(32, 550, 0);
 			
-		ofSetColor(225);
-		ofDrawBitmapString("son", 4, 18);
+	// 	ofSetColor(225);
+	// 	ofDrawBitmapString("son", 4, 18);
 		
-		ofSetLineWidth(1);	
-		ofDrawRectangle(0, 0, 900, 200);
+	// 	ofSetLineWidth(1);	
+	// 	ofDrawRectangle(0, 0, 900, 200);
 
-		ofSetColor(245, 58, 135);
-		ofSetLineWidth(3);
+	// 	ofSetColor(245, 58, 135);
+	// 	ofSetLineWidth(3);
 					
-			ofBeginShape();
-			ftinverse(cplx_spectrum,n_bands, spectreInverse, spectreInverse.size());
-			for (unsigned int i = 0; i < n_bands; i++){
-				float x =  ofMap(i, 0, spectreInverse.size(), 0, 900, true);
-				ofVertex(x, 100 -spectreInverse[i]*180.0f);
-			}
-			ofEndShape(false);
+	// 		ofBeginShape();
+	// 		ftinverse(cplx_spectrum,n_bands, spectreInverse, spectreInverse.size());
+	// 		for (unsigned int i = 0; i < n_bands; i++){
+	// 			float x =  ofMap(i, 0, spectreInverse.size(), 0, 900, true);
+	// 			ofVertex(x, 100 -spectreInverse[i]*180.0f);
+	// 		}
+	// 		ofEndShape(false);
 			
-		ofPopMatrix();
-	ofPopStyle();
+	// 	ofPopMatrix();
+	// ofPopStyle();
 
 		
 	ofSetColor(225);
@@ -339,6 +343,8 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 	for (size_t i = 0; i < buffer.getNumFrames(); i++){
 		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
 		float sample = sin(phase);
+		rawValues[0] = sample;
+		sample = bandPass(rawValues, filteredValues, 0.2, 0.1);
 		lAudio[i] = sample * volume * pan ; //sortie visuelle
 		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
 

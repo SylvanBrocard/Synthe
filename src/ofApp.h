@@ -47,6 +47,8 @@ class ofApp : public ofBaseApp{
 		vector <float> spectre;
 		vector <float> spectreInverse;
 		vector <std::complex<float>> cplx_spectrum;
+		vector <float> rawValues, filteredValues;
+
 		float   octave;
 		float	FreqPlayed;
 		std::string	note;	
