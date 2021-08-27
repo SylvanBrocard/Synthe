@@ -3,6 +3,7 @@
 #include <cmath>
 #include <string>
 #include "bandPass.h"
+#include "bandReject.h"
 #include "brillance.h"
 
 //--------------------------------------------------------------
@@ -363,7 +364,10 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 			phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
 			float sample = representation(phase, brillance);
 			rawValues[0] = sample;
-			sample = bandPass(rawValues, filteredValues, x1, x2);
+			if(x1 <= x2)
+				sample = bandPass(rawValues, filteredValues, x1, x2);
+			else
+				sample = bandReject(rawValues, filteredValues, x1, x2);
 			lAudio[i] = sample * volume * pan ; //sortie visuelle
 			buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
 
