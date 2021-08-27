@@ -311,13 +311,13 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	// bNoise = true;
+	bNoise = true;
 }
 
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-	// bNoise = false;
+	bNoise = false;
 }
 
 //--------------------------------------------------------------
@@ -337,9 +337,9 @@ void ofApp::windowResized(int w, int h){
 
 //--------------------------------------------------------------
 void ofApp::audioOut(ofSoundBuffer & buffer){
-	//pan = 0.5f;
-	// float leftScale = pan;
-	// float rightScale = pan;
+	pan = 0.5f;
+	float leftScale = pan;
+	float rightScale = pan;
 
 	// sin (n) seems to have trouble when n is very large, so we
 	// keep phase in the range of 0-TWO_PI like this:
@@ -347,25 +347,31 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 		phase -= TWO_PI;
 	}
 
-	// if ( bNoise == true){
+	if ( bNoise == true){
 		// ---------------------- noise --------------
-		// for (size_t i = 0; i < buffer.getNumFrames(); i++){
-		// 	lAudio[i] = buffer[i*buffer.getNumChannels()    ] = ofRandom(0, 1) * volume * leftScale;
-		// 	rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = ofRandom(0, 1) * volume * rightScale;
-		// }
-	 
-	
-	for (size_t i = 0; i < buffer.getNumFrames(); i++){
-		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
-		float sample = representation(phase, brillance);
-		rawValues[0] = sample;
-		sample = bandPass(rawValues, filteredValues, x1, x2);
-		lAudio[i] = sample * volume * pan ; //sortie visuelle
-		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
-
-		rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
+		for (size_t i = 0; i < buffer.getNumFrames(); i++){
+			float sample = ofRandom(0, 1) * volume * leftScale;
+			rawValues[0] = sample;
+			sample = bandPass(rawValues, filteredValues, x1, x2);
+			lAudio[i] = buffer[i*buffer.getNumChannels()    ] = sample;
+			// lAudio[i] = buffer[i*buffer.getNumChannels()    ] = ofRandom(0, 1) * volume * leftScale;
+			rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample;
+			// rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = ofRandom(0, 1) * volume * rightScale;
+		}
 	}
+	else{
 	
+		for (size_t i = 0; i < buffer.getNumFrames(); i++){
+			phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
+			float sample = representation(phase, brillance);
+			rawValues[0] = sample;
+			sample = bandPass(rawValues, filteredValues, x1, x2);
+			lAudio[i] = sample * volume * pan ; //sortie visuelle
+			buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
+
+			rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
+		}
+	}
 
 }
 
