@@ -141,7 +141,10 @@ void ofApp::draw(){
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
 
-		ofSetColor(100);
+		if(x1 <= x2)
+			ofSetColor(100);
+		else
+			ofSetColor(100,0,0);
 		ofFill();
 		ofDrawRectangle(x1*900 / sampleRate * 2.0, 0, (x2-x1)*900 / sampleRate * 2.0, 200);
 		ofNoFill();
