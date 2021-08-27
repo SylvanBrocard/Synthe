@@ -9,9 +9,9 @@
 void ofApp::setup(){
 
 	gui.setup(); // to draw sliders
-	gui.add(brillance.setup("brillance", 0, 0, 2)); // to draw brillance slider
-	gui.add(x1.setup("x1_filtre", 0, 0, 1)); // to draw x1 filter slider
-	gui.add(x2.setup("x2_filtre", 1, 0, 1)); // to draw x2 filter slider
+	gui.add(brillance.setup("Brillance", 0, 0, 2)); // to draw brillance slider
+	gui.add(x1.setup("Frequence basse", 0, 0, 1)); // to draw x1 filter slider
+	gui.add(x2.setup("Frequence haute", 1, 0, 1)); // to draw x2 filter slider
 
 
 
@@ -96,9 +96,9 @@ void ofApp::draw(){
 	gui.draw(); // to draw sliders
 
 	ofSetColor(225);
-	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
-	ofDrawBitmapString("press 'x' to unpause the audio\npress 'c' to pause the audio", 31, 92);
-	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 31, 120);
+	ofDrawBitmapString("Artek - Prototype de Synthétiseur v0.4.6", 32, 32);
+	ofDrawBitmapString("Press 'x' to unpause the audio\nPress 'c' to pause the audio", 31, 92);
+	ofDrawBitmapString("Press 'o' to increase the octave\nPress 'l' to decrease the octave", 31, 120);
 	
 	ofNoFill();
 		
@@ -108,7 +108,7 @@ void ofApp::draw(){
 		ofTranslate(32, 150, 0);
 			
 		ofSetColor(225);
-		ofDrawBitmapString("son", 4, 18);
+		ofDrawBitmapString("Son", 4, 18);
 		
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
@@ -132,14 +132,15 @@ void ofApp::draw(){
 		ofTranslate(32, 350, 0);
 			
 		ofSetColor(225);
-		ofDrawBitmapString("spectre", 4, 18);
+		ofDrawBitmapString("Spectre", 4, 18);
 		
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
 
+		ofSetColor(100);
+		ofFill();
 		ofDrawRectangle(x1*900, 0, (x2-x1)*900, 200);
-		// printf("%f %f\n",x1,x2);
-
+		ofNoFill();
 		ofSetColor(245, 58, 135);
 		ofSetLineWidth(3);
 		
@@ -183,11 +184,11 @@ void ofApp::draw(){
 
 		
 	ofSetColor(225);
-	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\noctave: ("+ofToString(octave, 0)+") modify with O/L keys\nsynthesis: ";
+	string reportString = "Volume: ("+ofToString(volume, 2)+") modify with -/+ keys\nOctave: ("+ofToString(octave, 0)+") modify with O/L keys\nSynthesis: ";
 	if( !bNoise ){
-		reportString += "sine wave (" + ofToString(FreqPlayed, 2) + ")\nKey played : " + note;
+		reportString += "Sine wave (" + ofToString(FreqPlayed, 2) + ")\nKey played : " + note;
 	}else{
-		reportString += "noise";	
+		reportString += "Noise";	
 	}
 	ofDrawBitmapString(reportString, 32, 579);
 
