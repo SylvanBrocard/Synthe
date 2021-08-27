@@ -96,7 +96,7 @@ void ofApp::draw(){
 	gui.draw(); // to draw sliders
 
 	ofSetColor(225);
-	ofDrawBitmapString("Artek - Prototype de Synthétiseur v0.4.6", 32, 32);
+	ofDrawBitmapString("Artek - Prototype de Synthetiseur v0.4.6", 32, 32);
 	ofDrawBitmapString("Press 'x' to unpause the audio\nPress 'c' to pause the audio", 31, 92);
 	ofDrawBitmapString("Press 'o' to increase the octave\nPress 'l' to decrease the octave", 31, 120);
 	
