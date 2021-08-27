@@ -48,7 +48,12 @@ class ofApp : public ofBaseApp{
 		float	FreqPlayed;
 		std::string	note;	
 	
-		ofxFloatSlider brillance; // to draw radius slider
-		ofxPanel gui; // to draw radius slider
+		ofxFloatSlider brillance; // to draw brillance slider
+		ofxPanel gui; // to draw brillance slider
+		ofxFloatSlider x1; // to draw slider for filter
+		ofxFloatSlider x2; // to draw slider for filter
+
+
+
 
 };

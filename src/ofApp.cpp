@@ -9,8 +9,11 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	gui.setup(); // to draw radius slider
+	gui.setup(); // to draw sliders
 	gui.add(brillance.setup("brillance", 0, 0, 2)); // to draw brillance slider
+	gui.add(x1.setup("x1_filtre", 0, 0, 1)); // to draw x1 filter slider
+	gui.add(x2.setup("x2_filtre", 1, 0, 1)); // to draw x2 filter slider
+
 
 
 	ofBackground(34, 34, 34);
@@ -86,7 +89,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	gui.draw(); // to draw radius slider
+	gui.draw(); // to draw sliders
 
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
@@ -94,7 +97,7 @@ void ofApp::draw(){
 	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 31, 120);
 	
 	ofNoFill();
-	
+		
 	// draw the left channel:
 	ofPushStyle();
 		ofPushMatrix();
@@ -130,9 +133,12 @@ void ofApp::draw(){
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
 
+		ofDrawRectangle(x1*900, 0, (x2-x1)*900, 200);
+		// printf("%f %f\n",x1,x2);
+
 		ofSetColor(245, 58, 135);
 		ofSetLineWidth(3);
-					
+		
 			ofBeginShape();
 			FT(lAudio,lAudio.size(), spectre, n_bands);
 			for (unsigned int i = 0; i < n_bands; i++){
