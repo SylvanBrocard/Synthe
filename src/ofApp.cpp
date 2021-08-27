@@ -4,8 +4,6 @@
 #include <string>
 #include "ftinverse.h"
 #include "bandPass.h"
-#include "carre.h"
-#include "dent_scie.h"
 #include "brillance.h"
 
 //--------------------------------------------------------------
