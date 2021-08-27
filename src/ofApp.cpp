@@ -4,9 +4,19 @@
 #include <string>
 #include "ftinverse.h"
 #include "bandPass.h"
+#include "carre.h"
+#include "dent_scie.h"
+#include "brillance.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+
+	gui.setup(); // to draw sliders
+	gui.add(brillance.setup("brillance", 0, 0, 2)); // to draw brillance slider
+	gui.add(x1.setup("x1_filtre", 0, 0, 1)); // to draw x1 filter slider
+	gui.add(x2.setup("x2_filtre", 1, 0, 1)); // to draw x2 filter slider
+
+
 
 	ofBackground(34, 34, 34);
 	
@@ -86,13 +96,15 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+	gui.draw(); // to draw sliders
+
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
 	ofDrawBitmapString("press 'x' to unpause the audio\npress 'c' to pause the audio", 31, 92);
 	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 31, 120);
 	
 	ofNoFill();
-	
+		
 	// draw the left channel:
 	ofPushStyle();
 		ofPushMatrix();
@@ -128,9 +140,12 @@ void ofApp::draw(){
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
 
+		ofDrawRectangle(x1*900, 0, (x2-x1)*900, 200);
+		// printf("%f %f\n",x1,x2);
+
 		ofSetColor(245, 58, 135);
 		ofSetLineWidth(3);
-					
+		
 			ofBeginShape();
 			FT(lAudio,lAudio.size(), spectre, n_bands, cplx_spectrum);
 			for (unsigned int i = 0; i < n_bands; i++){
@@ -342,7 +357,7 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 	
 	for (size_t i = 0; i < buffer.getNumFrames(); i++){
 		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
-		float sample = sin(phase);
+		float sample = representation(phase, brillance);
 		rawValues[0] = sample;
 		sample = bandPass(rawValues, filteredValues, 0.2, 0.1);
 		lAudio[i] = sample * volume * pan ; //sortie visuelle
