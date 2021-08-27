@@ -11,9 +11,11 @@
 void ofApp::setup(){
 
 	gui.setup(); // to draw sliders
-	gui.add(brillance.setup("Brillance", 0, 0, 2)); // to draw brillance slider
+	gui.setPosition(32,550);
+	gui.setSize(900, 50);
 	gui.add(x1.setup("Frequence basse", 0, 0, sampling_rate / 2.0)); // to draw x1 filter slider
 	gui.add(x2.setup("Frequence haute", sampling_rate / 2.0, 0, sampling_rate / 2.0)); // to draw x2 filter slider
+	gui.add(brillance.setup("Brillance", 0, 0, 2)); // to draw brillance slider
 
 
 
@@ -192,7 +194,7 @@ void ofApp::draw(){
 	}else{
 		reportString += "Noise";	
 	}
-	ofDrawBitmapString(reportString, 32, 579);
+	ofDrawBitmapString(reportString, 32, 649);
 
 }
 
