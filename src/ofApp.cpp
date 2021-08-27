@@ -182,11 +182,11 @@ void ofApp::draw(){
 	ofDrawBitmapString(reportString, 32, 579);
   
 //   image.setAnchorPoint(1,1);
-  image.draw(ofGetWidth()/2 - image.getWidth() / 2, 10);  
+  image.draw(ofGetWidth()/2 - image.getWidth() , 50);  
   image.resize(50,50);
   
 //   image2.setAnchorPoint(180,10);
-  image2.draw(ofGetWidth() - image.getWidth() , 0);  
+  image2.draw(ofGetWidth()/2 - image.getWidth()/2 , 0);  
   
   image2.resize(200,50);
 }
