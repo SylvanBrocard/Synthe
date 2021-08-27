@@ -1,0 +1,1 @@
+const float sampling_rate = 44100.0;

@@ -2,13 +2,20 @@
 #include "FT.h"
 #include <cmath>
 #include <string>
+#include "ftinverse.h"
+#include "bandPass.h"
+#include "carre.h"
+#include "dent_scie.h"
 #include "brillance.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	gui.setup(); // to draw radius slider
+	gui.setup(); // to draw sliders
 	gui.add(brillance.setup("brillance", 0, 0, 2)); // to draw brillance slider
+	gui.add(x1.setup("x1_filtre", 0, 0, 1)); // to draw x1 filter slider
+	gui.add(x2.setup("x2_filtre", 1, 0, 1)); // to draw x2 filter slider
+
 
 
 	ofBackground(34, 34, 34);
@@ -20,15 +27,20 @@ void ofApp::setup(){
 	// phaseAdderTarget 	= 0.0f;
 	volume				= 0.1f;
 	bNoise 				= false;
-	int n_bands         =512;
-	float spectre[512];
+	
 	octave				= 3;
 	pan 				= 0.5;
 	FreqPlayed 			= 30.0;
 
 	lAudio.assign(bufferSize, 0.0);
 	rAudio.assign(bufferSize, 0.0);
-	
+	spectre.assign(bufferSize, 0.0);
+	spectreInverse.assign(bufferSize, 0.0);
+	cplx_spectrum.assign(bufferSize, {0.0,0.0});
+
+	rawValues.assign(3, 0.0);
+	filteredValues.assign(3, 0.0);
+
 	soundStream.printDeviceList();
 
 	ofSoundStreamSettings settings;
@@ -84,7 +96,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	gui.draw(); // to draw radius slider
+	gui.draw(); // to draw sliders
 
 	ofSetColor(225);
 	ofDrawBitmapString("AUDIO OUTPUT EXAMPLE", 32, 32);
@@ -92,7 +104,7 @@ void ofApp::draw(){
 	ofDrawBitmapString("press 'o' to increase the octave\npress 'l' to decrease the octave", 31, 120);
 	
 	ofNoFill();
-	
+		
 	// draw the left channel:
 	ofPushStyle();
 		ofPushMatrix();
@@ -128,20 +140,50 @@ void ofApp::draw(){
 		ofSetLineWidth(1);	
 		ofDrawRectangle(0, 0, 900, 200);
 
+		ofDrawRectangle(x1*900, 0, (x2-x1)*900, 200);
+		// printf("%f %f\n",x1,x2);
+
 		ofSetColor(245, 58, 135);
 		ofSetLineWidth(3);
-					
+		
 			ofBeginShape();
-			FT(lAudio,lAudio.size(), spectre, n_bands);
+			FT(lAudio,lAudio.size(), spectre, n_bands, cplx_spectrum);
 			for (unsigned int i = 0; i < n_bands; i++){
 				float x =  ofMap(i, 0, n_bands, 0, 900, true);
-				ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
+				ofVertex(x, 200 -std::abs(cplx_spectrum[i])*180.0f*0.1f);
+				// ofVertex(x, 200 -spectre[i]*180.0f*0.1f);
 			}
 			ofEndShape(false);
 			
 		ofPopMatrix();
 	ofPopStyle();
 	
+	// FT inverse affichage
+
+	// ofPushStyle();
+	// 	ofPushMatrix();
+	// 	ofTranslate(32, 550, 0);
+			
+	// 	ofSetColor(225);
+	// 	ofDrawBitmapString("son", 4, 18);
+		
+	// 	ofSetLineWidth(1);	
+	// 	ofDrawRectangle(0, 0, 900, 200);
+
+	// 	ofSetColor(245, 58, 135);
+	// 	ofSetLineWidth(3);
+					
+	// 		ofBeginShape();
+	// 		ftinverse(cplx_spectrum,n_bands, spectreInverse, spectreInverse.size());
+	// 		for (unsigned int i = 0; i < n_bands; i++){
+	// 			float x =  ofMap(i, 0, spectreInverse.size(), 0, 900, true);
+	// 			ofVertex(x, 100 -spectreInverse[i]*180.0f);
+	// 		}
+	// 		ofEndShape(false);
+			
+	// 	ofPopMatrix();
+	// ofPopStyle();
+
 		
 	ofSetColor(225);
 	string reportString = "volume: ("+ofToString(volume, 2)+") modify with -/+ keys\noctave: ("+ofToString(octave, 0)+") modify with O/L keys\nsynthesis: ";
@@ -269,13 +311,13 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	// bNoise = true;
+	bNoise = true;
 }
 
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-	// bNoise = false;
+	bNoise = false;
 }
 
 //--------------------------------------------------------------
@@ -295,9 +337,9 @@ void ofApp::windowResized(int w, int h){
 
 //--------------------------------------------------------------
 void ofApp::audioOut(ofSoundBuffer & buffer){
-	//pan = 0.5f;
-	// float leftScale = pan;
-	// float rightScale = pan;
+	pan = 0.5f;
+	float leftScale = pan;
+	float rightScale = pan;
 
 	// sin (n) seems to have trouble when n is very large, so we
 	// keep phase in the range of 0-TWO_PI like this:
@@ -305,23 +347,31 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 		phase -= TWO_PI;
 	}
 
-	// if ( bNoise == true){
+	if ( bNoise == true){
 		// ---------------------- noise --------------
-		// for (size_t i = 0; i < buffer.getNumFrames(); i++){
-		// 	lAudio[i] = buffer[i*buffer.getNumChannels()    ] = ofRandom(0, 1) * volume * leftScale;
-		// 	rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = ofRandom(0, 1) * volume * rightScale;
-		// }
-	 
-	
-	for (size_t i = 0; i < buffer.getNumFrames(); i++){
-		phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
-		float sample = representation(phase, brillance);
-		lAudio[i] = sample * volume * pan ; //sortie visuelle
-		buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
-
-		rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
+		for (size_t i = 0; i < buffer.getNumFrames(); i++){
+			float sample = ofRandom(0, 1) * volume * leftScale;
+			rawValues[0] = sample;
+			sample = bandPass(rawValues, filteredValues, x1, x2);
+			lAudio[i] = buffer[i*buffer.getNumChannels()    ] = sample;
+			// lAudio[i] = buffer[i*buffer.getNumChannels()    ] = ofRandom(0, 1) * volume * leftScale;
+			rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample;
+			// rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = ofRandom(0, 1) * volume * rightScale;
+		}
 	}
+	else{
 	
+		for (size_t i = 0; i < buffer.getNumFrames(); i++){
+			phase += TWO_PI * FreqPlayed * (1/44100.0); // i transformé en temps t
+			float sample = representation(phase, brillance);
+			rawValues[0] = sample;
+			sample = bandPass(rawValues, filteredValues, x1, x2);
+			lAudio[i] = sample * volume * pan ; //sortie visuelle
+			buffer[i*buffer.getNumChannels()    ] = sample * volume * pan ; // sortie audio
+
+			rAudio[i] = buffer[i*buffer.getNumChannels() + 1] = sample * volume * pan;
+		}
+	}
 
 }
 

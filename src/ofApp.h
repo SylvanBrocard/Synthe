@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include <string>
+#include <complex>
+
 #include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
@@ -42,13 +44,22 @@ class ofApp : public ofBaseApp{
 		float 	phase;
 		float 	phaseAdder;
 		float 	phaseAdderTarget;
-		int n_bands         =512;
-		float spectre[512];
+		int n_bands=512;
+		vector <float> spectre;
+		vector <float> spectreInverse;
+		vector <std::complex<float>> cplx_spectrum;
+		vector <float> rawValues, filteredValues;
+
 		float   octave;
 		float	FreqPlayed;
 		std::string	note;	
 	
-		ofxFloatSlider brillance; // to draw radius slider
-		ofxPanel gui; // to draw radius slider
+		ofxFloatSlider brillance; // to draw brillance slider
+		ofxPanel gui; // to draw brillance slider
+		ofxFloatSlider x1; // to draw slider for filter
+		ofxFloatSlider x2; // to draw slider for filter
+
+
+
 
 };
